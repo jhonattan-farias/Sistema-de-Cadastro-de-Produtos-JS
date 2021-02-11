@@ -2,9 +2,10 @@
     margin: 0;
     padding: 0;
     outline: 0;
+    border: 0;
 }
 
-h1,p,span,strong{
+h1,p,span,strong,label{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -25,33 +26,71 @@ body{
 .form-field{
     display:flex;
     align-self: center;
+    flex-direction: column;
 
-    background: rgb(5, 205, 255);
+    background: rgb(185, 185, 185);
     margin-top: 50px;
-    width: 18rem;
-    height: 2.4rem;
-    padding: 1rem;
+    width: 30rem;
+    height: 10.6rem;
+    padding: 1.5rem;
     border-radius: 5px;
 }
 
 #name{
-    width: 12rem;
-    margin-right: 8px;
+    width: 25rem;
+    margin:0 0 1rem;
+    height: 2.4rem;
+    border: 0;
+    border-radius: 5px;
+    padding-left: 8px;
+    font-weight: bold;
+    align-self: center;
+
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+.name-field{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#quantidade{
+    width: 5rem;
+    margin:0 0 1rem;
     height: 2.1rem;
     border: 0;
     border-radius: 5px;
     padding-left: 8px;
     font-weight: bold;
+    align-self: center;
+
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+#product-name{
+    font-size: 15pt;
+    margin-bottom: 5px;
+}
+
+#quantidade-number{
+    font-size: 10pt;
 }
 
 #add{
     padding: 2px;
-    height: 2.1rem;
-    width: 5rem;
+    height: 5.1rem;
+    width: 6rem;
+
     border-radius: 5px;
     border: 0;
     background-color: white;
     cursor: pointer;
+
+    font-size: 10.3pt;
+    font-weight: bold;
 }
 /**/
 
@@ -63,7 +102,7 @@ body{
     margin-top: 12px;
 }
 
-#produtos div{
+#produto{
     background: rgb(0, 255, 76);
     color: rgb(0, 0, 0);
 
