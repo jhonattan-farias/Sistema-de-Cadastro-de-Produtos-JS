@@ -14,60 +14,79 @@ body{
     flex-direction: column;
 }
 /*Titulo Principal*/
+.header{
+    background-color: rgb(179, 21, 179);
+    height: 25vh;
+    padding: 1rem;
+}
 #main-title{
     margin-top: 1rem;
     align-self: center;
     justify-self: center;
-    color: rgb(22, 245, 78);
+    font-size: 40pt;
+    color: white;
 }
 /**/
 
 /*Campo de Pesquisa*/
 .form-field{
     display:flex;
-    align-self: center;
-    flex-direction: column;
 
-    background: rgb(185, 185, 185);
-    margin-top: 50px;
-    width: 30rem;
-    height: 10.6rem;
+    position: absolute;
+
+    margin-top: 130px;
+    width: 45rem;
+    height: 5rem;
     padding: 1.5rem;
-    border-radius: 5px;
+}
+
+.form-field p{
+    font-weight: bold;
+    color: rgb(0, 255, 76);
 }
 
 #name{
     width: 25rem;
     margin:0 0 1rem;
-    height: 2.4rem;
+    height: 3.4rem;
     border: 0;
     border-radius: 5px;
-    padding-left: 8px;
     font-weight: bold;
-    align-self: center;
 
-    margin-top: 15px;
+    margin-top: 5px;
     margin-left: 5px;
+    background: rgb(236, 237, 238);
 }
 
 .name-field{
-    display: flex;
+    color: white;
+    flex-direction: column;
     align-items: center;
-    width: 100%;
+    height: 10rem;
+    margin-right: 2rem;
 }
 
 #quantidade{
-    width: 5rem;
+    width: 7rem;
     margin:0 0 1rem;
-    height: 2.1rem;
+    height:3.4rem;
     border: 0;
     border-radius: 5px;
     padding-left: 8px;
     font-weight: bold;
     align-self: center;
 
-    margin-top: 10px;
+    margin-top: 5px;
     margin-left: 5px;
+    background: rgb(236, 237, 238);
+}
+
+.quantidade-field{
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    height: 10rem;
+    margin-right: 2rem;
 }
 
 #product-name{
@@ -81,13 +100,14 @@ body{
 
 #add{
     padding: 2px;
-    height: 5.1rem;
+    height: 3.5rem;
     width: 6rem;
 
     border-radius: 5px;
     border: 0;
-    background-color: white;
+    background: rgb(0, 255, 76);
     cursor: pointer;
+    margin-top: 24px;
 
     font-size: 10.3pt;
     font-weight: bold;
@@ -110,7 +130,7 @@ body{
     width: 25rem;
     padding: 1rem;
 
-    margin-top: 5px;
+    margin-top: 46px;
 
     border-radius: 7px;
 }
