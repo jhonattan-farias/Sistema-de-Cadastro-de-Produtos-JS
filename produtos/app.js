@@ -1,30 +1,41 @@
-var productName = document.getElementById('name').value
+var productName = document.getElementById('name')
 var produto = document.getElementById('product')
 var produtos = document.getElementById('produtos')
-var quantidade = document.getElementById('quantidade').value
+var quantidade = document.getElementById('quantidade')
 
 var nameprodutos = []
 
 function cadastrarProduto(){
 
-    if(productName !== '' && quantidade !== ''){
-        nameprodutos.push({name:productName,quantidade:Number(quantidade)})
+    if(productName.value === '',
+    isNaN(quantidade.value) === true | quantidade.value === ''){
+    
+        return window.alert('Campo de pesquisa Invalido')
+    
+    }
+
+        nameprodutos.push({
+            name:productName.value,
+            quantidade:quantidade.value
+        })
+
         
         productName.value = ''
         quantidade.value = ''
         renderizarProdutos()
-        console.log(nameprodutos)
-    }
-else{
-    return window.alert('Campo de pesquisa vazio')    
-}
+        console.log(nameprodutos) 
+
+
 }
 
 function renderizarProdutos(){
 
-    deletar()
-
-    nameprodutos.map(item =>{
+    produtos.innerHTML = ''
+    localStorage.setItem('dados',nameprodutos)
+    let storageProducts = JSON.stringify(localStorage.dados)
+    
+        storageProducts.map(item =>{
+      
         var newDiv = document.createElement('div')
         produtos.appendChild(newDiv)
         newDiv.id = 'produto'
@@ -45,12 +56,4 @@ function renderizarProdutos(){
 
 }
 
-function deletar(){
-    produtos.innerHTML = ''
-}
-
-export {productName}
-
 document.getElementById('add').onclick = cadastrarProduto
-
-document.getElementById('apagar').onclick = sendEvent
