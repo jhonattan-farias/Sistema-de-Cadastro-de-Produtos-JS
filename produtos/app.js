@@ -5,6 +5,8 @@ var quantidade = document.getElementById('quantidade')
 
 var nameprodutos = []
 
+renderizarProdutos()
+
 function cadastrarProduto(){
 
     if(productName.value === '',
@@ -31,10 +33,8 @@ function cadastrarProduto(){
 function renderizarProdutos(){
 
     produtos.innerHTML = ''
-    localStorage.setItem('dados',nameprodutos)
-    let storageProducts = JSON.stringify(localStorage.dados)
     
-        storageProducts.map(item =>{
+        nameprodutos.map(item =>{
       
         var newDiv = document.createElement('div')
         produtos.appendChild(newDiv)
