@@ -124,14 +124,45 @@ body{
 }
 
 #produto{
+    display: flex;
+    justify-content: space-between;
     background: rgb(0, 255, 76);
     color: rgb(0, 0, 0);
 
-    height: 50px;
+    height: 55px;
     width: 25rem;
     padding: 1rem;
 
     margin-top: 46px;
 
     border-radius: 7px;
+}
+
+.button-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#delete-button{
+    padding: .5rem;
+    height: 1.8rem;
+
+    align-content: center;
+    border-radius: 5px;
+
+    background-color: red;
+    color: white;
+    margin-bottom: 5px;
+}
+
+#add-button{
+    padding: .5rem;
+    height: 1.8rem;
+
+    align-content: center;
+    border-radius: 5px;
+
+    background-color: rgb(195, 0, 255);
+    color: white;
 }

@@ -3,7 +3,7 @@ const quantidade = document.getElementById('quantidade')
 
 import renderizarProdutos from './render.js'
 
-const nameprodutos = []
+var nameprodutos = []
 
 function cadastrarProduto(){
 
@@ -16,7 +16,8 @@ function cadastrarProduto(){
 
         nameprodutos.push({
             name:productName.value,
-            quantidade:quantidade.value
+            quantidade:quantidade.value,
+            id:productName.value + Date.now()
         })
 
         
@@ -24,11 +25,10 @@ function cadastrarProduto(){
         quantidade.value = ''
 
         renderizarProdutos(nameprodutos)
-        console.log(nameprodutos) 
-
 
 }
 
 document.getElementById('add').onclick = cadastrarProduto
 
 export default cadastrarProduto
+

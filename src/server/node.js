@@ -3,9 +3,7 @@ const path = require('path')
 const app = express()
 
 
-app.listen(8080,
-    console.log('Servidor Ativado')
-)
+app.listen(8080,() => console.log('Servidor Ativado'))
 
 app.get('/',(req,res) => {
 
