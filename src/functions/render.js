@@ -57,12 +57,22 @@ function renderizarProdutos(produtos){
         newDiv.appendChild(buttonDiv)
         buttonDiv.className = 'button-div'
         deleteButton.id = 'delete-button'
-        addButton.id = 'add-button'  
-    //inserindo um escutador de eventos nos botões    
-        deleteButton.addEventListener('click',deleteFunction)
-        addButton.addEventListener('click',addFunction)
+        addButton.id = 'add-button'
+          
+        const sendingPropsToDelete = () => {
+            deleteFunction(produtos,item.id)
+           }  
+
+        const sendingPropsToAdd = () => {
+            addFunction(produtos,item.id)
+        }     
+    //inserindo um escutador de eventos nos botões
+        deleteButton.addEventListener('click',sendingPropsToDelete)
+        addButton.addEventListener('click',sendingPropsToAdd)
 
     })
+
+      
 }
 
 export default renderizarProdutos
