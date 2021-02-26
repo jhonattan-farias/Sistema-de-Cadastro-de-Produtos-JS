@@ -5,7 +5,7 @@ function deleteFunction(props,id){
 
     const findedProduct = produtos.find(item => item.id === productId)
 
-    if(findedProduct.quantidade > 1 ){
+    if(findedProduct.quantidade > 0 ){
         const quantity = document.getElementById('quantidade-number')
         findedProduct.quantidade--
         quantity.innerHTML = `Quantidade: ${findedProduct.quantidade}`
