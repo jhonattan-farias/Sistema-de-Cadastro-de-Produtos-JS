@@ -36,7 +36,7 @@ function renderizarProdutos(produtos){
 
         newQuantidade.appendChild(theQuantidade)
         nameOfProducts.appendChild(newQuantidade)
-        newQuantidade.id = 'quantidade-number'
+        newQuantidade.id = `quantidade-number${item.id}`
 
     //criando elemento(deleteButton) e (addButton)
         const deleteButton = document.createElement("button")
@@ -56,9 +56,9 @@ function renderizarProdutos(produtos){
     //inserindo buttonDiv dentro da div principal, dando id aos elementos 
         newDiv.appendChild(buttonDiv)
         buttonDiv.className = 'button-div'
-        deleteButton.id = 'delete-button'
-        addButton.id = 'add-button'
-          
+        deleteButton.id = `delete-button${item.id}`
+        addButton.id = `add-button${item.id}`
+
         const sendingPropsToDelete = () => {
             deleteFunction(produtos,item.id)
            }  

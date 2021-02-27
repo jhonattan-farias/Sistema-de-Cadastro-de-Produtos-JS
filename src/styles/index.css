@@ -95,7 +95,7 @@ body{
     margin-bottom: 5px;
 }
 
-#quantidade-number{
+.quantidade-field{
     font-size: 10pt;
 }
 
@@ -122,15 +122,15 @@ body{
     align-items: center;
     margin-top: 12px;
 }
-
+/*Produto Individual*/
 #produto{
     display: flex;
     justify-content: space-between;
     background: rgb(0, 255, 76);
     color: rgb(0, 0, 0);
 
-    height: 55px;
-    width: 25rem;
+    height: 65px;
+    width: 35rem;
     padding: 1rem;
 
     margin-top: 46px;
@@ -138,13 +138,14 @@ body{
     border-radius: 7px;
 }
 
+/*Area de botões do produto*/
 .button-div{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-#delete-button{
+.button-div button{
     padding: .5rem;
     height: 1.8rem;
 
@@ -156,7 +157,7 @@ body{
     margin-bottom: 5px;
 }
 
-#add-button{
+.button-div button + button{
     padding: .5rem;
     height: 1.8rem;
 
@@ -165,4 +166,14 @@ body{
 
     background-color: rgb(195, 0, 255);
     color: white;
+}
+/*Area de nome e quantidade dos produtos*/
+#name-of-products{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between ;
+}
+
+#name-of-products strong{
+    font-size: 10pt;
 }

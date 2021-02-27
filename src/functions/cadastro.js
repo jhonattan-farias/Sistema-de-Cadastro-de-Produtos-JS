@@ -29,6 +29,5 @@ function cadastrarProduto(){
 }
 
 document.getElementById('add').onclick = cadastrarProduto
-
 export default cadastrarProduto
 

@@ -1,19 +1,17 @@
-function deleteFunction(props,id){
+function deleteFunction(produtos,id){
 
-    const produtos = props
-    const productId = id
+    const findedProduct = produtos.find(item => item.id === id)
 
-    const findedProduct = produtos.find(item => item.id === productId)
+    if(findedProduct.quantidade = -1 ){
+        produtos.splice(findedProduct)
+    } 
 
-    if(findedProduct.quantidade > 0 ){
-        const quantity = document.getElementById('quantidade-number')
+    else{
+        const quantity = document.getElementById(`quantidade-number${id}`)
         findedProduct.quantidade--
         quantity.innerHTML = `Quantidade: ${findedProduct.quantidade}`
     }
-    else{
-    produtos.splice(produtos.findedProduct)
-    }
-    console.log(produtos)
+    
 }
 
 
