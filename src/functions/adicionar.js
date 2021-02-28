@@ -1,12 +1,11 @@
-function addFunction(props,id){
+function addFunction(produtos,id,event){
 
-    const produtos = props
-    const productId = id
+    const findedProduct = produtos.find(item => item.id === id)
 
-    const findedProduct = produtos.find(item => item.id === productId)
+        const quantity = document.getElementById(`quantidade-number${id}`)
 
-        const quantity = document.getElementById('quantidade-number')
         findedProduct.quantidade++
+
         quantity.innerHTML = `Quantidade: ${findedProduct.quantidade}`
     
 
