@@ -1,4 +1,4 @@
-function addFunction(produtos,id,event){
+function addFunction(produtos,id){
 
     const findedProduct = produtos.find(item => item.id === id)
 
@@ -8,8 +8,7 @@ function addFunction(produtos,id,event){
 
         quantity.innerHTML = `Quantidade: ${findedProduct.quantidade}`
     
-
-    console.log(produtos)
+    console.log('produto adicionado ' +  findedProduct.quantidade)
 }
 
 
