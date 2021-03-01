@@ -1,19 +1,25 @@
 function deleteFunction(produtos,id){
 
     const findedIndex = produtos.findIndex(item => item.id === id)
-    console.log(findedIndex)
+    const product = produtos[findedIndex]
+    const quantity = document.getElementById(`quantidade-number${id}`)
+    const divProduct = document.getElementById(`produto${id}`)
 
-    if(produtos[findedIndex].quantidade < 1 ){
-        produtos.splice(produtos[findedIndex])
-        console.log(produtos) 
+    if(!product){
+        return console.log("product does not exist")
+    }
+
+    if(product.quantidade < 1){
+        produtos.splice(findedIndex,1)
+        divProduct.remove()
+        return;
     }
 
     else{
-        const quantity = document.getElementById(`quantidade-number${id}`)
         produtos[findedIndex].quantidade--
         quantity.innerHTML = `Quantidade: ${produtos[findedIndex].quantidade}`
     }
-    console.log(produtos[findedIndex].quantidade)
+    console.log(produtos)
 }
 
 

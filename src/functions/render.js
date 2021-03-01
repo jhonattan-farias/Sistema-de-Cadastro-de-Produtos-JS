@@ -23,7 +23,7 @@ function renderizarProdutos(produtos){
 
     //dando id as divs
         
-        newDiv.id = 'produto'
+        newDiv.id = `produto${item.id}`
         nameOfProducts.id = 'name-of-products'
 
     //Criando nome do produto, inserindo dentro da div pai
