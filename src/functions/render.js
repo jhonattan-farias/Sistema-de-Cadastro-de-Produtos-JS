@@ -52,6 +52,7 @@ function renderizarProdutos(produtos){
         
         const addButton = document.createElement('button')
         const addText = document.createTextNode('adicionar')
+        addButton.style = 'font-weight:bold;'
         
     //criando div que irá armazenar deleteButton e addButton
         
@@ -59,7 +60,7 @@ function renderizarProdutos(produtos){
 
         deleteButton.appendChild(deleteText)
         addButton.appendChild(addText)
-
+        deleteButton.style = 'font-weight:bold;'    
     //inserindo deleteButton e addButton dentro do buttonDiv
        
         buttonDiv.appendChild(deleteButton)
@@ -84,6 +85,7 @@ function renderizarProdutos(produtos){
 
     //inserindo um escutador de eventos nos botões
         deleteButton.addEventListener('click',sendingPropsToDelete)
+        
         addButton.addEventListener('click',sendingPropsToAdd)
     })
       

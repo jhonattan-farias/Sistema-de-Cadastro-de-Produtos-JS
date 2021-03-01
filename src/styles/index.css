@@ -57,6 +57,8 @@ body{
     margin-top: 5px;
     margin-left: 5px;
     background: rgb(236, 237, 238);
+
+    word-break: 10;
 }
 
 .name-field{
@@ -130,7 +132,7 @@ body{
     color: rgb(0, 0, 0);
 
     height: 65px;
-    width: 35rem;
+    min-width: 35rem;
     padding: 1rem;
 
     margin-top: 46px;
@@ -172,6 +174,8 @@ body{
     display: flex;
     flex-direction: column;
     justify-content:space-between ;
+
+    max-width: 20rem;
 }
 
 #name-of-products strong{

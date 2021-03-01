@@ -15,7 +15,7 @@ function cadastrarProduto(){
     }
 
         nameprodutos.push({
-            name:productName.value,
+            name:(productName.value).toUpperCase(),
             quantidade:quantidade.value,
             id:productName.value + Date.now()
         })
