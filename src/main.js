@@ -1,6 +1,5 @@
 import cadastrarProduto from './functions/cadastro.js'
-import deleteFunction from './functions/delete.js'
+import createSearchField from './functions/create-search-field.js'
 
+createSearchField()
 cadastrarProduto
-
-deleteFunction

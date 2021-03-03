@@ -139,7 +139,13 @@ body{
 
     border-radius: 7px;
 }
+/*Area de pesquisa de produtos*/
 
+.search-input-div{
+    background-color: red;
+}
+
+/**/
 /*Area de botões do produto*/
 .button-div{
     display: flex;
