@@ -20,13 +20,19 @@ function cadastrarProduto(){
             id:productName.value + Date.now()
         })
 
+        const parsedProducts = JSON.stringify(nameprodutos)
+
+        localStorage.setItem('produtos',parsedProducts)
         
         productName.value = ''
         quantidade.value = ''
 
-        renderizarProdutos(nameprodutos)
+        renderizarProdutos(getProducts)
 
+        
 }
+
+
 
 document.getElementById('add').onclick = cadastrarProduto
 export default cadastrarProduto

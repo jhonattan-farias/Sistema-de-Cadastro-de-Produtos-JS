@@ -125,6 +125,13 @@ body{
     margin-top: 12px;
 }
 /*Produto Individual*/
+#search-input{
+    background:rgb(197, 199, 201);
+    width: 100%;
+    height: 2.2rem;
+    margin-top: 50px;
+}
+
 #produtos > div{
     display: flex;
     justify-content: space-between;
