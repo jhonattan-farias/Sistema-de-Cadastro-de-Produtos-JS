@@ -3,7 +3,12 @@ const quantidade = document.getElementById('quantidade')
 
 import renderizarProdutos from './render.js'
 
+const parsedProducts = JSON.parse(localStorage.getItem('produtos'))
+
 var nameprodutos = []
+console.log(parsedProducts)
+
+nameprodutos.push(parsedProducts)
 
 function cadastrarProduto(){
 
@@ -26,9 +31,6 @@ function cadastrarProduto(){
         
         productName.value = ''
         quantidade.value = ''
-
-        renderizarProdutos(getProducts)
-
         
 }
 
