@@ -6,5 +6,4 @@ import renderizarProdutos from './functions/render.js'
 cadastrarProduto
 
 const getProducts = JSON.parse(localStorage.getItem('produtos'))
-console.log(getProducts)
 renderizarProdutos(getProducts)

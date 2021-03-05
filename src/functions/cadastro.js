@@ -4,11 +4,9 @@ const quantidade = document.getElementById('quantidade')
 import renderizarProdutos from './render.js'
 
 const parsedProducts = JSON.parse(localStorage.getItem('produtos'))
+nameprodutos.push(parsedProducts)
 
 var nameprodutos = []
-console.log(parsedProducts)
-
-nameprodutos.push(parsedProducts)
 
 function cadastrarProduto(){
 
