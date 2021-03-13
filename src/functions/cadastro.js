@@ -1,10 +1,9 @@
 const productName = document.getElementById('name')
 const quantidade = document.getElementById('quantidade')
 
-import renderizarProdutos from './render.js'
+import armazenarProdutos from './armazenarProdutos.js'
 
-const parsedProducts = JSON.parse(localStorage.getItem('produtos'))
-nameprodutos.push(parsedProducts)
+import renderizarProdutos from './render.js'
 
 var nameprodutos = []
 
@@ -22,14 +21,12 @@ function cadastrarProduto(){
             quantidade:quantidade.value,
             id:productName.value + Date.now()
         })
-
-        const parsedProducts = JSON.stringify(nameprodutos)
-
-        localStorage.setItem('produtos',parsedProducts)
         
         productName.value = ''
         quantidade.value = ''
         
+        armazenarProdutos(nameprodutos)
+        renderizarProdutos()
 }
 
 

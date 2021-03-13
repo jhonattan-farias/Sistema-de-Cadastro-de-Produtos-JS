@@ -2,11 +2,13 @@ const divProdutos = document.getElementById('produtos')
 import deleteFunction from './delete.js'
 import addFunction from './adicionar.js'
 
-function renderizarProdutos(produtos){
+function renderizarProdutos(){
+
+
 
     divProdutos.innerHTML = ''
     
-        produtos.map(item =>{
+        Products.map(item =>{
       
     //Criando div que irá armazenar os produtos(newDiv)*/
        

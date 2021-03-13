@@ -5,5 +5,4 @@ import renderizarProdutos from './functions/render.js'
 //createSearchField()
 cadastrarProduto
 
-const getProducts = JSON.parse(localStorage.getItem('produtos'))
-renderizarProdutos(getProducts)
+//renderizarProdutos()
