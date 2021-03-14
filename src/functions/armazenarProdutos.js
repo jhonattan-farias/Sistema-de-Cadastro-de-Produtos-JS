@@ -1,19 +1,20 @@
 function armazenarProdutos(produto){
+     const produtos = []
 
      let storagedProducts = localStorage.getItem('produtos')
      const produtosEmString = JSON.stringify(produto)
 
-     if(storagedProducts == 1){
-          //localStorage.setItem('produtos',produtosEmString)
-          console.log('that side')
+     if(!storagedProducts){
+          localStorage.setItem('produtos',produtosEmString)
+          console.log(localStorage.produtos)
           return
      }
      
-     //storagedProducts += produto
+     JSON.parse(storagedProducts)
 
-     //localStorage.removeItem('produtos')
-     //localStorage.setItem('produtos',storagedProducts)
-     console.log('im here')
+     localStorage.removeItem('produtos')
+     localStorage.setItem('produtos',storagedProducts)
+     console.log(typeof(storagedProducts))
 
 }
 
