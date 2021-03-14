@@ -35,7 +35,7 @@ body{
     position: absolute;
 
     margin-top: 130px;
-    width: 45rem;
+    width: 55rem;
     height: 5rem;
     padding: 1.5rem;
 }
@@ -46,7 +46,7 @@ body{
 }
 
 #name{
-    width: 25rem;
+    width: 35rem;
     margin:0 0 1rem;
     height: 3.4rem;
     border: 0;
@@ -58,7 +58,11 @@ body{
     margin-left: 5px;
     background: rgb(236, 237, 238);
 
-    word-break: 10;
+    transition: .7s;
+}
+#name:hover{
+    box-shadow:1px 1px 10px 1px;
+    transform: translateY(5px);
 }
 
 .name-field{
@@ -82,6 +86,12 @@ body{
     margin-top: 5px;
     margin-left: 5px;
     background: rgb(236, 237, 238);
+
+    transition:.7s;
+}
+#quantidade:hover{
+    box-shadow:1px 1px 10px 1px;
+    transform: translateY(5px);
 }
 
 .quantidade-field{
@@ -114,6 +124,12 @@ body{
 
     font-size: 10.3pt;
     font-weight: bold;
+
+    transition: .5s;
+}
+#add:hover{
+    background-color:rgb(54, 240, 110);
+    box-shadow:1px 1px 10px 1px white;
 }
 /**/
 
