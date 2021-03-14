@@ -8,13 +8,16 @@ import renderizarProdutos from './render.js'
 var nameprodutos = []
 
 function cadastrarProduto(){
+    
+    const conditions = 
+    isNaN(quantidade.value) === true |
+    quantidade.value === '' |
+    quantidade.value < 0
 
-    if(productName.value === '',
-    isNaN(quantidade.value) === true | quantidade.value === ''){
-    
+    if(productName.value === '', conditions)
+        {
         return window.alert('Campo de pesquisa Invalido')
-    
-    }
+        }
 
         nameprodutos.push({
             name:(productName.value).toUpperCase(),
