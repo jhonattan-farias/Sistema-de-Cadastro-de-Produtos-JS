@@ -4,7 +4,8 @@ import addFunction from './adicionar.js'
 
 function renderizarProdutos(){
 
-
+    const Products = JSON.parse(localStorage.getItem('produtos'))
+    
 
     divProdutos.innerHTML = ''
     
@@ -78,11 +79,11 @@ function renderizarProdutos(){
     //Criando função que retornará informações para outras funções delete e add.
 
         const sendingPropsToDelete = () => {
-            deleteFunction(produtos,item.id)
+            deleteFunction(Products,item.id)
         }  
 
         const sendingPropsToAdd = () => {
-            addFunction(produtos,item.id)
+            addFunction(Products,item.id)
         }     
 
     //inserindo um escutador de eventos nos botões

@@ -5,4 +5,4 @@ import renderizarProdutos from './functions/render.js'
 //createSearchField()
 cadastrarProduto
 
-//renderizarProdutos()
+renderizarProdutos()
