@@ -2,34 +2,42 @@ const productName = document.getElementById('name')
 const quantidade = document.getElementById('quantidade')
 
 import armazenarProdutos from './armazenarProdutos.js'
-
 import renderizarProdutos from './render.js'
 
-var nameprodutos = []
-
 function cadastrarProduto(){
-    
+
+    let nameprodutos = ''
+
     const conditions = 
     isNaN(quantidade.value) === true |
     quantidade.value === '' |
     quantidade.value < 0
 
-    if(productName.value === '', conditions)
+        if(productName.value === '', conditions)
         {
         return window.alert('Campo de pesquisa Invalido')
         }
 
-        nameprodutos.push({
+        nameprodutos = [{
             name:(productName.value).toUpperCase(),
             quantidade:quantidade.value,
-            id:productName.value + Date.now()
-        })
+            id:quantidade.value + Date.now()
+        }]
+
+    productName.value = ''
+    quantidade.value = ''
+
+        if(!localStorage.produtos){
+            armazenarProdutos(JSON.stringify(nameprodutos))
+            renderizarProdutos()
+            return
+        }
         
-        productName.value = ''
-        quantidade.value = ''
+    armazenarProdutos(JSON.stringify(nameprodutos))
         
-        armazenarProdutos(nameprodutos)
-        renderizarProdutos()
+    renderizarProdutos()
+
+    nameprodutos = ''
 }
 
 
