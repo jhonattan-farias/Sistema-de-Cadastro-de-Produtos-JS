@@ -8,9 +8,9 @@ function armazenarProdutos(produto){
           
      }
 
-     localStorage.removeItem('produtos')
-
-     localStorage.setItem('produtos',produto)
+     const copy = localStorage.produtos
+     
+     localStorage.produtos += {produto:produto}
 }
 
 export default armazenarProdutos
